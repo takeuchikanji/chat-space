@@ -1,0 +1,26 @@
+.side-bar
+  .side-bar__user-name
+    .top-items
+      .top-items__name
+        user-name
+      .top-items__icons
+        = link_to "#", class: "top-items__btn" do
+          = icon("far", "edit", class: "edit__btn")
+        = link_to "#", class: "top-items__btn" do
+          = icon("fa", "cog", class: "cog__btn")
+  .side-bar__group-list
+    .single-group
+      .single-group__name
+        グループ1
+      .single-group__message
+        まだメッセージありません
+    .single-group
+      .single-group__name
+        グループ2
+      .single-group__message
+        まだメッセージありません
+    .single-group
+      .single-group__name
+        グループ3
+      .single-group__message
+        まだメッセージありません
