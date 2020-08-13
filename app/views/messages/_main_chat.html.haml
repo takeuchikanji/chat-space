@@ -1,0 +1,36 @@
+.chat-main
+  .chat-main__group-info
+    .current-group
+      .current-group__name
+        グループ１
+      .current-group__member
+        Member：Aさん
+    .group-info__edit
+      = link_to "#", class: "group-info__edit__btn" do
+        edit
+  .chat-main__message-list
+    .user-message
+      .user-message__info
+        .user-message__info__name
+          Aさん
+        .user-message__info__time
+          2020/8/12
+      .user-message__chat
+        あいうえお
+    .user-message
+      .user-message__info
+        .user-message__info__name
+          Aさん
+        .user-message__info__time
+          2020/8/12
+      .user-message__chat
+        かきくけこ
+  .chat-main__message-form
+    %form.message-form
+      .message-form__left
+        %input.message-form__left__text{type: "text", placeholder: "type a message"}
+        %label.message-form__left__photo
+          = icon('fas', 'image')
+          %input.message-form__left__photo__file{type: "file"}
+      %input.message-form__send{type: "submit", value: "SEND"}
+
