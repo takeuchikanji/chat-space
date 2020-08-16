@@ -12,9 +12,9 @@
 .side-bar {
   width: 300px;
   background-color: #253141;
-  color:#ffffff;
   font-weight: bold;
   &__user-name {
+    color: #ffffff;
     background-color: #253141;
     height: 100px;
     display: flex;
@@ -48,10 +48,12 @@
     .single-group {
       padding: 20px 20px 40px;
       &__name {
+        color: #ffffff;
         font-size: 15px;
         margin-bottom: 5px;
       }
       &__message {
+        color: #ffffff;
         font-size: 11px;
       }
     }

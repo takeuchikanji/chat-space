@@ -4,23 +4,15 @@
       .top-items__name
         = current_user.name
       .top-items__icons
-        = link_to "#", class: "top-items__btn" do
+        = link_to new_group_path, class: "top-items__btn" do
           = icon("far", "edit", class: "edit__btn")
         = link_to edit_user_path(current_user), class: "top-items__btn" do
           = icon("fa", "cog", class: "cog__btn")
   .side-bar__group-list
-    .single-group
-      .single-group__name
-        グループ1
-      .single-group__message
-        まだメッセージありません
-    .single-group
-      .single-group__name
-        グループ2
-      .single-group__message
-        まだメッセージありません
-    .single-group
-      .single-group__name
-        グループ3
-      .single-group__message
-        まだメッセージありません
+    - current_user.groups.each do |group|
+      .single-group
+        = link_to '#' do
+          .single-group__name
+            = group.name
+          .single-group__message
+            まだメッセージありません
