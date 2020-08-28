@@ -3,7 +3,7 @@ $(function(){
   function buildHTML(message){
     if (message.image) {
       let html = 
-        `<div class="user-message">
+        `<div class="user-message" data-message-id=${message.id}>
           <div class="user-message__info">
             <div class="user-message__info__name">
               ${message.user_name}
@@ -22,7 +22,7 @@ $(function(){
       return html;
     } else {
       let html = 
-        `<div class="user-message">
+        `<div class="user-message" data-message-id=${message.id}>
           <div class="user-message__info">
             <div class="user-message__info__name">
               ${message.user_name}
@@ -64,6 +64,7 @@ $(function(){
 
     .fail(function() {
       alert("メッセージ送信に失敗しました");
+      $('.message-form__send').prop('disabled', false);
     });
   });
 });
